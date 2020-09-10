@@ -31,10 +31,6 @@ class MyFirstSelectWithJoin
   end
 end
 
-# accepted_formats = [".csv"]
-# p Dir.pwd
-# Dir.each_child(".") {|x| puts (accepted_formats.include? File.extname(x) ) ? x : "not csv"}
-
 inst = MyFirstSelectWithJoin.new("nba_player_data.csv")
 inst.join("name", "nba_players.csv", "Player")
 inst.where("birth_state", "Indiana")
