@@ -2,17 +2,17 @@ require "csv"
 class MyFirstSelect
   def initialize(filename_db)
     @filename = filename_db
-    @url = []
+    @data = []
   end
 
   def where(column_name, criteria)
     CSV.foreach(@filename, :headers => true) do |row|
       get_hash = row.to_hash
       if  get_hash [column_name] == criteria
-        @url << get_hash
+        @data << get_hash
       end
     end
-    @url
+    @data
   end
 end
 
