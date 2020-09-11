@@ -2,16 +2,54 @@
 
 .blog-header {
   line-height: 1;
-  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  background-color: #fff !important;
 }
 
-.blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
+.nav-hig {
+  height: 20px;
 }
-
-.blog-header-logo:hover {
-  text-decoration: none;
+.nav-w {
+  min-width: 1px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.nav-b {
+  background-color: rgba(197, 210, 225, 1);
+}
+.alert-dark{
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
+}
+.card {
+  border: none !important;
+  border-radius: 0 !important;
+}
+.card-body{
+  padding-left: 0 !important;
+}
+.message {
+  margin-left: 0.5rem;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.fellow {
+  margin-left: .3rem;
+  border:1px solid rgba(117, 117, 117, 1);
+  border-radius: 4px;
+  padding: 1px 6px;
+  cursor: pointer;
+}
+.title{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 13px;
+  color: #292929;
+}
+@media (min-width: 992px){
+  .reduce-container{
+    max-width: 740px !important;
+  }
 }
 .text-muted {
   color: white !important;
@@ -20,6 +58,7 @@
 .nav-scroller {
   background-color: rgba(53, 88, 118, 1) !important;
   height: 3.75rem !important;
+  margin-top: 6rem!important;
 }
 .btn-outline-secondary {
   border-color: rgba(102, 138, 170, 1) !important;

@@ -30,8 +30,21 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <header class="blog-header py-3">
+    <!-- <nav class="navbar navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class=" navbar-brand text-muted" href="#">
+          <svg width="35" height="35" viewBox="5 5 35 35" class="ao r"><path d="M5 40V5h35v35H5zm8.56-12.63c0 .56-.03.69-.32 1.03L10.8 31.4v.4h6.97v-.4L15.3 28.4c-.29-.34-.34-.5-.34-1.03v-8.95l6.13 13.36h.71l5.26-13.36v10.64c0 .3 0 .35-.19.53l-1.85 1.8v.4h9.2v-.4l-1.83-1.8c-.18-.18-.2-.24-.2-.53V15.94c0-.3.02-.35.2-.53l1.82-1.8v-.4h-6.47l-4.62 11.55-5.2-11.54h-6.8v.4l2.15 2.63c.24.3.29.37.29.77v10.35z"></path></svg>
+        </a>
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#" >
+            Open in app
+          </a>
+          <a class="nav-item" href="#">Get started</a>
+        </div>
+      </div>
+    </nav> -->
+    <header class="blog-header py-3 fixed-top">
+      <div class="container">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
             <a class="text-muted" href="#">
@@ -45,8 +58,8 @@
             <a class="btn btn-sm btn-outline-secondary nav-color" href="#">Get started</a>
           </div>
         </div>
+      </div>
       </header>
-    </div>
 
   <div class="nav-scroller py-2 mb-4">
     <div class="container">
@@ -59,47 +72,33 @@
       <a class="p-2 text-muted" href="#">Video</a>
       <a class="p-2 text-muted" href="#">★</a>
       <a class="p-2 text-muted" href="#">About</a>
+      <span class="nav-hig nav-w nav-b"></span>
       <a class="p-2 text-muted" href="#">Contribute</a>
     </nav>
   </div>
   </div>
-  <div class="container">
-  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+  <div class="container reduce-container">
+    <div class="alert alert-dark" role="alert">
+      You have <span class="alert-link">2</span> free stories left this month. <span class="text-info">Sign up and get an extra one for free.</span>
     </div>
-  </div>
+    <div>
+      <h1>10 Common Software Architectural Patterns in a nutshell</h1>
+    </div>
 
   <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-muted">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body d-flex">
+          <img src="https://miro.medium.com/fit/c/96/96/2*pTTsurl-IeDfoG86mmVGQQ.jpeg" alt="" class="rounded-circle" width="48" height="48">
+          <div class="message">
+            <p class="title dark-col">Vijini Mallawaarachchi <span><dev class="fellow">fellow</dev></span></p>
+            <p class="title dark-col">Sep 4, 2017 . 5 min read <span style="padding-left:4px"><svg class="star-15px_svg__svgIcon-use" width="15" height="15" viewBox="0 0 15 15" style="margin-top:-2px"><path d="M7.44 2.32c.03-.1.09-.1.12 0l1.2 3.53a.29.29 0 0 0 .26.2h3.88c.11 0 .13.04.04.1L9.8 8.33a.27.27 0 0 0-.1.29l1.2 3.53c.03.1-.01.13-.1.07l-3.14-2.18a.3.3 0 0 0-.32 0L4.2 12.22c-.1.06-.14.03-.1-.07l1.2-3.53a.27.27 0 0 0-.1-.3L2.06 6.16c-.1-.06-.07-.12.03-.12h3.89a.29.29 0 0 0 .26-.19l1.2-3.52z"></path></svg></span></p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-        </div>
-      </div>
+    <div class="col-md-4">
+      button
     </div>
   </div>
 </div>
