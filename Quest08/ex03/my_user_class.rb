@@ -3,13 +3,14 @@ class User
   def initialize
     @db = "db.raw"
     @user = Hash.new
+    @random_number = 0
   end
 
   def create(user_info)
-    random_number = (rand * 100).floor()
-    @user.update({random_number => user_info})
+    @random_number += 1
+    @user.update({@random_number => user_info})
     backup()
-    random_number
+    @random_number
   end
 
   def get(user_id)
@@ -21,14 +22,22 @@ class User
   end
 
   def update(user_id, attribute, value)
-    users = restore()["#{user_id}"]
+    allusers = restore()
+    users = allusers["#{user_id}"]
     users[attribute] = value
-    users
+    @user = allusers
+    backup()
+    return users
   end
 
   def destory(user_id)
-    restore().delete("#{user_id}")
+    allusers = restore()
+    u = allusers.delete("#{user_id}")
+    @user = allusers
+    puts " with id #{user_id}"
+    backup()
   end
+  
   def backup
     File.open(@db, "w") {|f| f.write JSON.generate(@user)}
   end
@@ -51,7 +60,6 @@ users.each { |user| ids << inst.create(user)}
 puts "Gets a user"
 p inst.get(ids.sample)
 puts
-
 puts "Fetches all users"
 p inst.all
 
@@ -62,7 +70,7 @@ p inst.update(ids.sample, 'lastname', 'tony')
 
 puts
 
-puts "Destroyed a user"
+print "Destroyed a user"
 inst.destory(ids.sample)
 
 puts "lets comfirm"
