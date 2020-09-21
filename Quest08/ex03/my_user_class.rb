@@ -14,6 +14,7 @@ class User
   end
 
   def get(user_id)
+    puts " with id #{user_id}"
     restore()["#{user_id}"]
   end
 
@@ -22,6 +23,7 @@ class User
   end
 
   def update(user_id, attribute, value)
+    puts " with id #{user_id}, attribute of #{attribute} and value of #{value}"
     allusers = restore()
     users = allusers["#{user_id}"]
     users[attribute] = value
@@ -57,7 +59,7 @@ users = [
 inst = User.new
 ids = []
 users.each { |user| ids << inst.create(user)}
-puts "Gets a user"
+print "Gets a user"
 p inst.get(ids.sample)
 puts
 puts "Fetches all users"
@@ -65,13 +67,13 @@ p inst.all
 
 puts 
 
-puts "Update a user a random users"
+print "Update a random users"
 p inst.update(ids.sample, 'lastname', 'tony')
 
 puts
 
 print "Destroyed a user"
 inst.destory(ids.sample)
-
-puts "lets comfirm"
+puts
+print "\t\t ----lets comfirm----\n"
 p inst.all
