@@ -44,7 +44,7 @@ class User
     return users
   end
 
-  def destory(user_id)
+  def destroy(user_id)
     allusers = restore()
     u = allusers.delete("#{user_id}")
     @user = allusers
@@ -115,5 +115,19 @@ put("/users"){
     JSON.generate(inst.get(id))
   }
 }
-delete("/sign_out"){}
-delete("/users"){}
+
+delete("/sign_out"){
+  id = session["auth"].inspect
+  if id != "" and id != nil
+    session["auth"] = nil
+    "thanks for signing out"
+  end
+}
+
+delete("/users"){
+  id = session["auth"].inspect
+  if id != "" and id != nil
+    inst.destroy(id)
+    session["auth"] = nil
+  end
+}
