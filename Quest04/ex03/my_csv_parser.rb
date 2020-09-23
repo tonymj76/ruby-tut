@@ -5,4 +5,4 @@ def my_csv_parser(filename, separator="")
   print rows
 end
 
-my_csv_parser("./data.csv", )
+my_csv_parser("./data.csv")
