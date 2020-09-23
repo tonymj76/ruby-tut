@@ -32,7 +32,7 @@ class User
     return users
   end
 
-  def destory(user_id)
+  def destroy(user_id)
     allusers = restore()
     u = allusers.delete("#{user_id}")
     @user = allusers
@@ -73,7 +73,7 @@ p inst.update(ids.sample, 'lastname', 'tony')
 puts
 
 print "Destroyed a user"
-inst.destory(ids.sample)
+inst.destroy(ids.sample)
 puts
 print "\t\t ----lets comfirm----\n"
 p inst.all
